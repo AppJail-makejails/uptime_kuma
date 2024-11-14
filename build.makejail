@@ -1,0 +1,19 @@
+INCLUDE options/options.makejail
+INCLUDE options/volumes.makejail
+
+PKG npm git-tiny
+
+CMD pw useradd -n uptime_kuma -c "Fancy self-hosted monitoring tool" -d /app -s /bin/sh
+CMD mkdir -p /app
+CMD chown uptime_kuma:uptime_kuma /app
+
+USER uptime_kuma
+
+RUN git clone https://github.com/louislam/uptime-kuma.git /app/src
+
+WORKDIR /app/src
+RUN npm run setup
+
+# Workaround
+CMD sed -i '' -Ee "s/\(process\.platform === 'linux'\) cacheDirectory/(process.platform === 'freebsd') cacheDirectory/" /app/src/node_modules/playwright-core/lib/server/registry/index.js
+CMD chown uptime_kuma:uptime_kuma /app/src/node_modules/playwright-core/lib/server/registry/index.js

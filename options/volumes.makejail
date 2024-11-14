@@ -1,0 +1,3 @@
+OPTION volume=uptimekuma-data mountpoint:/app/data owner:1001 group:1001
+OPTION volume=uptimekuma-server mountpoint:/app/server owner:1001 group:1001
+OPTION volume=uptimekuma-db mountpoint:/app/db owner:1001 group:1001
