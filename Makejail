@@ -1,0 +1,30 @@
+INCLUDE options/options.makejail
+
+ARG uptime_kuma_tag=13.4
+
+FROM --entrypoint gh+AppJail-makejails/uptime_kuma uptime_kuma:${uptime_kuma_tag}
+
+STOP
+
+STAGE start
+
+USER uptime_kuma
+WORKDIR /app/src
+
+RUN daemon \
+        -t "Fancy self-hosted monitoring tool" \
+        -p /app/.pid \
+        -o /app/uptime_kuma.log \
+            node server/server.js
+
+STAGE custom:uptime_kuma_status
+
+CMD if [ -f "/app/.pid" ]; then \
+        top -ap `head -1 /app/.pid`; \
+    fi
+
+STAGE custom:uptime_kuma_log
+
+CMD if [ -f "/app/uptime_kuma.log" ]; then \
+        less -R /app/uptime_kuma.log; \
+    fi
