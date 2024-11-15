@@ -9,6 +9,7 @@ uptime.kuma.pet
 ## How to use this Makejail
 
 ```sh
+mkdir -p .volumes/data
 appjail makejail \
     -j uptime_kuma \
     -f gh+AppJail-makejails/uptime_kuma \
