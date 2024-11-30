@@ -17,6 +17,7 @@ appjail makejail \
     -o nat \
     -o expose=3001 \
     -o fstab="$PWD/.volumes/data uptimekuma-data <volumefs>"
+appjail start uptime_kuma
 ```
 
 ### Arguments (stage: build):
