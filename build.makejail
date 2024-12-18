@@ -1,6 +1,5 @@
 INCLUDE options/options.makejail
 INCLUDE options/volumes.makejail
-INCLUDE resizewin-fix.makejail
 
 PKG npm git-tiny
 
