@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG uptime_kuma_tag=13.4
+ARG uptime_kuma_tag=13.5
 ARG uptime_kuma_ajspec=gh+AppJail-makejails/uptime_kuma
 
 FROM --entrypoint "${uptime_kuma_ajspec}" uptime_kuma:${uptime_kuma_tag}
