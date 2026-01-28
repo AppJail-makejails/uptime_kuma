@@ -1,14 +1,15 @@
 tags+: 14.3
 14.3.arch: amd64
 14.3.name: "uptime_kuma"
-14.3.timestamp.amd64: 1768848378
-14.3.sum.amd64: 9d6fd7c92f35f5006e75ae7ba4ea38d84752c6005feb5e67ce68a5119834e291
-14.3.size.amd64: 259240448
+14.3.timestamp.amd64: 1769625799
+14.3.sum.amd64: 3846d4b1bc109ecea4143a3d32041308c9af17f2162fad238b364253e0972f3d
+14.3.size.amd64: 259267889
 14.3.source.amd64: "http://appjail.hpc.at/uptime_kuma/14.3-amd64-image.appjail"
 tags+: 15
 15.arch: amd64
 15.name: "uptime_kuma"
-15.timestamp.amd64: 1768849028
-15.sum.amd64: 62b88204e7fb256d2d68236c04f42b9c968fdefb4b0a7dd462b00ffff57fb557
-15.size.amd64: 433347117
+15.timestamp.amd64: 1769626402
+15.sum.amd64: 56189a573b31a5f6b796519245cc6a95bfec2534084625c8cbde9754afa7e29c
+15.size.amd64: 434797651
 15.source.amd64: "http://appjail.hpc.at/uptime_kuma/15-amd64-image.appjail"
+maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
